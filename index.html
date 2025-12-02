@@ -36,7 +36,7 @@
 
           <div class="actions">
             <!-- Play button opens the game in a new tab (hosted path) -->
-            <a class="btn btn-play" id="openGame" href="./index.html" target="_blank" rel="noopener">Open Game (New Tab)</a>
+            <a class="btn btn-play" id="openGame" href="./index.html" target="_blank" rel="noopener">Open Game</a>
             <!-- GitHub repo link (replace with your repo URL) -->
             <a class="btn btn-git" id="openRepo" href="https://github.com/Paurush-Nimje/Game-Portal" target="_blank" rel="noopener">View on GitHub</a>
           </div>
@@ -59,26 +59,14 @@
         <h2 style="margin:0 0 6px">About this website</h2>
         <p style="margin:0;color:var(--muted)">This site is a lightweight landing page that hosts the game and provides a convenient link to the project's GitHub repository. It's designed to be hosted on any static site hosting service. The game itself is bundled as <code>index.html</code> — copy both files to the same folder when deploying.</p>
 
-        <h3 style="margin-top:14px">Deployment notes</h3>
-        <ul style="color:var(--muted)">
-          <li><strong>GitHub Pages:</strong> Create a repository, push these files to the repository root (or <code>gh-pages</code> branch) and enable GitHub Pages in repository settings.</li>
-          <li><strong>Netlify / Vercel:</strong> Connect your repository or drag-and-drop the project folder with <code>index.html</code> into their dashboard — they will host it instantly.</li>
-          <li><strong>Custom domain & HTTPS:</strong> GitHub Pages / Netlify / Vercel provide HTTPS and easy DNS configuration for custom domains.</li>
-        </ul>
+        
 
-        <h3 style="margin-top:12px">Files to include</h3>
-        <pre style="background:rgba(0,0,0,0.1);padding:8px;border-radius:6px;color:var(--muted)">/project-root
-  ├─ index.html        # landing page (this file)
-  └─ game/
-     └─ index.html      # the game file created earlier
-</pre>
-
-        <p style="color:var(--muted)">When hosted, the <em>Open Game</em> button and the preview iframe will load <code>/game/index.html</code> (or adjust the paths if you place the game at the site root).</p>
+        
       </div>
 
       <footer class="card" style="margin-top:12px">
-        <div>Author: <strong>Paurush Nimje</strong> — Repository: <a href="https://github.com/Paurush-Nimje/Game-Portal" target="_blank" rel="noopener" style="color:inherit;font-weight:700">Paurush-Nimje/Game-Portal</a></div>
-        <div style="margin-top:6px;color:var(--muted)">If you want, I can produce a ready-to-deploy ZIP containing this landing page and the game file, add CI/CD setup, or create a GitHub repo with proper README, LICENSE, and preview assets.</div>
+        <div>Author: <strong>Paurush Nimje</strong> — Repository: <button onclick="window.open('https://github.com/Paurush-Nimje/Game-Portal','_blank')" style="padding:6px 12px;border-radius:6px;border:0;background:#7dd3fc;color:#012;font-weight:700;cursor:pointer">Open Repository</button></div>
+        
       </footer>
     </div>
   </header>
@@ -88,7 +76,7 @@
     const preview = document.getElementById('gamePreview');
     const openGame = document.getElementById('openGame');
     // prefer to use ./game/index.html to avoid clobbering landing page
-    const gamePath = './game/index.html';
+    const gamePath = 'https://paurush-nimje.github.io/Game-Portal/';
     preview.src = gamePath;
     openGame.href = gamePath;
 
