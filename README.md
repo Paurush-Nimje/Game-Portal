@@ -1,2 +1,2 @@
 # Game-Portal
-Collect & Avoid.html
+index.html
