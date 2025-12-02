@@ -36,7 +36,7 @@
 
           <div class="actions">
             <!-- Play button opens the game in a new tab (hosted path) -->
-            <a class="btn btn-play" id="openGame" href="https://paurush-nimje.github.io/Collect & Avoid.html" target="_blank" rel="noopener">Open Game</a>
+            <a class="btn btn-play" id="openGame" href="#gameSection">Open Game</a>
             <!-- GitHub repo link (replace with your repo URL) -->
             <a class="btn btn-git" id="openRepo" href="https://github.com/Paurush-Nimje/Game-Portal" target="_blank" rel="noopener">View on GitHub</a>
           </div>
@@ -47,10 +47,10 @@
           </div>
         </div>
 
-        <div style="width:420px;max-width:42%">
+        <div id="gameSection" style="width:420px;max-width:42%">
           <div class="preview card">
             <!-- Inline preview iframe: points to the hosted game path (adjust as needed) -->
-            <iframe id="gamePreview" src="./index.html" title="Game preview"></iframe>
+            <iframe id="gamePreview" src="https://paurush-nimje.github.io/Game-Portal/game/index.html" title="Game preview"></iframe>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@
     const preview = document.getElementById('gamePreview');
     const openGame = document.getElementById('openGame');
     // prefer to use ./game/index.html to avoid clobbering landing page
-    const gamePath = 'https://paurush-nimje.github.io/Game-Portal/';
+    const gamePath = 'https://paurush-nimje.github.io/Game-Portal/game/index.html';
     preview.src = gamePath;
     openGame.href = gamePath;
 
